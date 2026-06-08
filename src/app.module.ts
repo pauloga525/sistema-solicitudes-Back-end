@@ -12,7 +12,7 @@ import { RequestsModule } from './modules/requests/requests.module';
 
     MongooseModule.forRoot(
       process.env.MONGODB_URI ||
-        'mongodb://localhost:27017/sistema_solicitudes',
+        'mongodb://192.168.200.62:27017/sistema_solicitudes',
     ),
 
     AuthModule,
