@@ -87,9 +87,10 @@ export class RequestsService {
 
   async findAll(filters: FilterRequestsDto) {
     const query: Record<string, unknown> = {};
-    if (filters.status) query.status = filters.status;
-    if (filters.campus) query.campus = filters.campus;
-    if (filters.course) query.course = filters.course;
+    if (filters.status)  query.status          = filters.status;
+    if (filters.course)  query.course          = filters.course;
+    if (filters.paralelo) query.paralelo        = filters.paralelo;
+    if (filters.subject) query['payload.subjects'] = filters.subject;
 
     if (filters.search) {
       const regex = new RegExp(filters.search, 'i');

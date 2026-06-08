@@ -1,5 +1,5 @@
 import { IsEnum, IsOptional, IsString } from 'class-validator';
-import { Campus, Course, RequestStatus } from '../schemas/request.schema';
+import { Course, Paralelo, RequestStatus } from '../schemas/request.schema';
 
 export class FilterRequestsDto {
   @IsOptional()
@@ -7,12 +7,16 @@ export class FilterRequestsDto {
   status?: RequestStatus;
 
   @IsOptional()
-  @IsEnum(Campus)
-  campus?: Campus;
-
-  @IsOptional()
   @IsEnum(Course)
   course?: Course;
+
+  @IsOptional()
+  @IsEnum(Paralelo)
+  paralelo?: Paralelo;
+
+  @IsOptional()
+  @IsString()
+  subject?: string;
 
   @IsOptional()
   @IsString()
