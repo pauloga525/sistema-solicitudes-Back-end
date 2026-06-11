@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AuthModule } from './modules/auth/auth.module';
 import { RequestsModule } from './modules/requests/requests.module';
+import { SolicitudConfigModule } from './modules/solicitud-config/solicitud-config.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { RequestsModule } from './modules/requests/requests.module';
 
     AuthModule,
     RequestsModule,
+    SolicitudConfigModule,
   ],
 })
 export class AppModule {}
